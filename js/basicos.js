@@ -102,5 +102,13 @@ console.log(typeof vuelvoNumero + vuelvoNumero);
 console.log("##################  Booleans  ##################");
 let veradero = true;
 let falso = false;
-console.log(veradero,falso);
+console.log(veradero, falso);
 //tienen su constructor pero este no tiene utilidad
+
+console.log("##################  undefined, null & NaN  ##################");
+let indefinida //undefined indica que no se ha inicializado una variable y que el valor está ausente
+console.log(indefinida)
+let nulo = null //el valor nulo se lo agrega intencionalmente
+console.log(nulo)
+let noEsUnNumero = "hola" * 3.7;//NaN - Not a Number
+console.log(noEsUnNumero); 
