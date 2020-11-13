@@ -52,10 +52,10 @@ objeto.trabajo = "Software Developer";
 
 console.log("Constante tipo de dato compuesto modificado", objeto);
 
-console.log("##################  Cadenas de Texto-Strings  ##################");
+console.log("################## Cadenas de Texto-(Strings) ##################");
 
 let nombre = "hola ";
-//otra forma de crear string, pero es lo mismo (tienen los mismos metodos y propiedades)
+//tambien se pueden crear con su constructor, pero es lo mismo (tienen los mismos metodos y propiedades)
 let nombre2 = new String("soy un string");
 console.log(nombre, nombre2);
 
@@ -85,3 +85,18 @@ let ul = `<ul>
     <li>invierno</li>
 </ul>`;
 console.log(ul);
+
+console.log("##################  Números (Numbers)  ##################");
+let numero = 10;
+//su constructor 
+let numero2 = new Number(20); 
+let numero3 = 10.5
+console.log(numero3.toFixed(5))// = nos dice cuantos numeros decimales va a tener
+console.log(parseInt(numero3))// = nos entrega un entero
+let cadenaTexto = "15"
+let vuelvoNumero = parseInt(cadenaTexto)
+//typeof nos dice de que tipo es
+console.log(typeof cadenaTexto + cadenaTexto)
+console.log(typeof vuelvoNumero + vuelvoNumero)
+
+
