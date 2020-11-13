@@ -88,15 +88,19 @@ console.log(ul);
 
 console.log("##################  Números (Numbers)  ##################");
 let numero = 10;
-//su constructor 
-let numero2 = new Number(20); 
-let numero3 = 10.5
-console.log(numero3.toFixed(5))// = nos dice cuantos numeros decimales va a tener
-console.log(parseInt(numero3))// = nos entrega un entero
-let cadenaTexto = "15"
-let vuelvoNumero = parseInt(cadenaTexto)
+//su constructor
+let numero2 = new Number(20);
+let numero3 = 10.5;
+console.log(numero3.toFixed(5)); // = nos dice cuantos numeros decimales va a tener
+console.log(parseInt(numero3)); // = nos entrega un entero
+let cadenaTexto = "15";
+let vuelvoNumero = parseInt(cadenaTexto);
 //typeof nos dice de que tipo es
-console.log(typeof cadenaTexto + cadenaTexto)
-console.log(typeof vuelvoNumero + vuelvoNumero)
+console.log(typeof cadenaTexto + cadenaTexto);
+console.log(typeof vuelvoNumero + vuelvoNumero);
 
-
+console.log("##################  Booleans  ##################");
+let veradero = true;
+let falso = false;
+console.log(veradero,falso);
+//tienen su constructor pero este no tiene utilidad
