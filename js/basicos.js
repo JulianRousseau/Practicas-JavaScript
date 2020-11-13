@@ -51,3 +51,22 @@ objeto.edad = 23;
 objeto.trabajo = "Software Developer";
 
 console.log("Constante tipo de dato compuesto modificado", objeto);
+
+console.log(
+  "##################  Cadenas de Texto (Strings)  ##################"
+);
+
+let nombre = "hola ";
+//otra forma de crear string, pero es lo mismo (tienen los mismos metodos y propiedades)
+let nombre2 = new String("soy un string");
+console.log(nombre, nombre2);
+
+//algunos metodos de string
+console.log(
+  nombre.length,
+  nombre2.length,
+  nombre.toUpperCase(),
+  nombre2.toLowerCase(),
+  nombre2.includes("un"),
+  nombre2.split(" ")
+);
