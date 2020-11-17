@@ -106,9 +106,63 @@ console.log(veradero, falso);
 //tienen su constructor pero este no tiene utilidad
 
 console.log("##################  undefined, null & NaN  ##################");
-let indefinida //undefined indica que no se ha inicializado una variable y que el valor está ausente
-console.log(indefinida)
-let nulo = null //el valor nulo se lo agrega intencionalmente
-console.log(nulo)
-let noEsUnNumero = "hola" * 3.7;//NaN - Not a Number
-console.log(noEsUnNumero); 
+let indefinida; //undefined indica que no se ha inicializado una variable y que el valor está ausente
+console.log(indefinida);
+let nulo = null; //el valor nulo se lo agrega intencionalmente
+console.log(nulo);
+let noEsUnNumero = "hola" * 3.7; //NaN - Not a Number
+console.log(noEsUnNumero);
+
+console.log("##################  Funciones  ##################");
+//Una función es un bloque de código, autocontenido, que se puede definir una vez y
+//ejecutar en cualquier momento. Opcionalmente, una función puede aceptar parámetros y devolver un valor (return).
+//Las funciones en JavaScript son objetos, un tipo especial de objetos
+
+//Declaracion de funcion
+function estoEsUnaFuncion() {
+  console.log("Esta");
+  console.log("es");
+  console.log("una");
+  console.log("funcion");
+}
+//invocacion de una funcion, los parentesis indican que se va a ejecutar
+estoEsUnaFuncion();
+
+//funcion con parametros
+function funcionConParametros(nombre, apellido) {
+  return `usted es ${nombre} ${apellido}`; //return indica lo que va a devolver la funcion
+  //si tenemos un return en el medio de una funcion, se devuelve el valor de ese return y
+  //el resto de la funcion se ignora
+  console.log("esto es ignorado");
+}
+console.log(funcionConParametros("Julian", "Rousseau"));
+
+//de  la siguiente forma podemos agregar valores por defecto, en caso de que no se le den parametros
+// en el momento de instanciar la funcion
+function funcionConParametros2(
+  nombre = "sin nombre",
+  apellido = "sin apellido"
+) {
+  return `usted es ${nombre} ${apellido}`;
+}
+let valorDeFuncion = funcionConParametros2(); //esta variable recive el return //esta funcion no resive parametros
+console.log(valorDeFuncion);
+
+//Funciones declaradas VS funciones expresadas
+funcionDeclarada();
+
+function funcionDeclarada() {
+  console.log(
+    "Esto es un función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada"
+  );
+}
+
+const funcionExpresada = function () { 
+// En este caso no le damos un nombre a la funcion porque ya nombramos a la variable,
+// esto se conoce como funcion anonima
+  console.log(
+    "Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'"
+  );
+};
+
+funcionExpresada();
