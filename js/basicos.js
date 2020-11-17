@@ -157,12 +157,43 @@ function funcionDeclarada() {
   );
 }
 
-const funcionExpresada = function () { 
-// En este caso no le damos un nombre a la funcion porque ya nombramos a la variable,
-// esto se conoce como funcion anonima
+const funcionExpresada = function () {
+  // En este caso no le damos un nombre a la funcion porque ya nombramos a la variable,
+  // esto se conoce como funcion anonima
   console.log(
     "Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'"
   );
 };
 
 funcionExpresada();
+
+console.log("##################  Arreglos (Arrays)  ##################");
+//Un arreglo es una coleccion de elementos
+//Declaracion de arry
+const a = [];
+
+const b = ["hola", "soy", 1, "arreglo", [1, 2, 3]];
+console.log(b);
+
+console.log(`longitud del arreglo = ${b.length}`);
+
+console.log(`index numero 0 = ${b[0]}`);
+console.log(`index numero 4 y subindex 2 = ${b[4][2]}`); //y asi sucesivamente dependiendo cuantas dimenciones tengamos
+
+//otra forma de crear arrys (con el metodo of)
+const c = Array.of("a", "b", "c", 1, 2, 3);
+
+const colores = ["Rojo", "Verde", "Azul"];
+console.log(colores);
+//Agregar elemento en la ultima posición
+colores.push("Negro");
+console.log(colores);
+//Eliminar elemento en la ultima posición
+colores.pop();
+console.log(colores);
+//metodo forEach para iterar en el arreglo
+console.log("recorriendo arreglo");
+colores.forEach(function (element, index) {
+  // "por cada" elemento , posicion
+  console.log(`<li id="${index}">${element}</li>`);
+});
