@@ -197,3 +197,42 @@ colores.forEach(function (element, index) {
   // "por cada" elemento , posicion
   console.log(`<li id="${index}">${element}</li>`);
 });
+
+console.log("##################  Objetos  ##################");
+//Un objeto es una coleccion de llaves : valores
+
+//Declaracion de Objetos
+const b2 = {}
+console.log(b2)
+
+const jr = {
+    nombre: "Julian",
+    apellido: "Rousseau",
+    edad: 23,
+    skills: ["CSS","HTML", "JAVASCRIPT"],
+    contacto: {
+        email: "julianrousseau31@gmail.com",
+        whatsapp: "5493624208302",
+        instagram: "julianrousseau1"
+    },
+    saludar: function () {
+        //this hace referencia al objeto donde estamos 
+        //this se vera en profundidad mas adelante
+        console.log(`Hola ${this.nombre} ${this.apellido}`)
+    }
+}
+
+console.log(jr)
+// se puede acceder a los valores con corchetes
+console.log(jr["nombre"])
+// de todos modos la forma mas comun de acceder es con el punto
+// el punto determina que queremos acceder a propiedades o metodos del objeto
+console.log(jr.apellido)
+console.log(jr.contacto.instagram)
+console.log(jr.skills[2])
+
+jr.saludar()
+//keys es un metodo de object que nos permite listar las llaves de un objeto
+console.log(Object.keys(jr)) 
+//values es un metodo de object que nos permite listar los valores de un objeto
+console.log(Object.values(jr)) 
