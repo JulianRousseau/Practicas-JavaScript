@@ -202,37 +202,91 @@ console.log("##################  Objetos  ##################");
 //Un objeto es una coleccion de llaves : valores
 
 //Declaracion de Objetos
-const b2 = {}
-console.log(b2)
+const b2 = {};
+console.log(b2);
 
 const jr = {
-    nombre: "Julian",
-    apellido: "Rousseau",
-    edad: 23,
-    skills: ["CSS","HTML", "JAVASCRIPT"],
-    contacto: {
-        email: "julianrousseau31@gmail.com",
-        whatsapp: "5493624208302",
-        instagram: "julianrousseau1"
-    },
-    saludar: function () {
-        //this hace referencia al objeto donde estamos 
-        //this se vera en profundidad mas adelante
-        console.log(`Hola ${this.nombre} ${this.apellido}`)
-    }
-}
+  nombre: "Julian",
+  apellido: "Rousseau",
+  edad: 23,
+  skills: ["CSS", "HTML", "JAVASCRIPT"],
+  contacto: {
+    email: "julianrousseau31@gmail.com",
+    whatsapp: "5493624208302",
+    instagram: "julianrousseau1",
+  },
+  saludar: function () {
+    //this hace referencia al objeto donde estamos
+    //this se vera en profundidad mas adelante
+    console.log(`Hola ${this.nombre} ${this.apellido}`);
+  },
+};
 
-console.log(jr)
+console.log(jr);
 // se puede acceder a los valores con corchetes
-console.log(jr["nombre"])
+console.log(jr["nombre"]);
 // de todos modos la forma mas comun de acceder es con el punto
 // el punto determina que queremos acceder a propiedades o metodos del objeto
-console.log(jr.apellido)
-console.log(jr.contacto.instagram)
-console.log(jr.skills[2])
+console.log(jr.apellido);
+console.log(jr.contacto.instagram);
+console.log(jr.skills[2]);
 
-jr.saludar()
+jr.saludar();
 //keys es un metodo de object que nos permite listar las llaves de un objeto
-console.log(Object.keys(jr)) 
+console.log(Object.keys(jr));
 //values es un metodo de object que nos permite listar los valores de un objeto
-console.log(Object.values(jr)) 
+console.log(Object.values(jr));
+
+console.log("##################  Tipos de Operadores  ##################");
+// ARITMETICOS
+// +, -, *, /, %, ()
+
+let aritmeticos = 5 + (5-10) * -3
+console.log(aritmeticos);
+let modulo = 1099 % 100 //el modulo nos da el residuo de una division 
+console.log(modulo);
+
+// RELACIONALES
+// >, <, <=, >=, ==, !=, ===, !==
+
+
+// = 1 igual es asignación  de variable
+// == 2 iguales es comparacion de valores
+// === 3 igulaes es comparación de tipo de dato y de valor
+
+console.log("7 == 7",        7 == 7);
+console.log('"7" == 7',    "7" == 7);
+console.log("7 === 7",       7 === 7);
+console.log('"7" === 7',   "7" === 7);
+
+console.log("7 != 7",        7 != 7);
+console.log('"7" != 7',    "7" != 7);
+console.log(" 7 !== 7",       7 !== 7);
+console.log('"7" !== 7',   "7" !== 7);
+
+// INCREMENTO - DECREMENTO
+// +=, -=, *=, /=
+let i =10
+i/=5
+console.log(i)
+
+// UNARIOS
+// ++, --
+
+i=10
+i++
+console.log(i)
+i--
+console.log(i)
+
+// LOGICOS
+// !  Not 
+// || Or 
+// && And
+
+console.log(!false);
+console.log((9 === 9) || ("9" === 9));
+console.log((9 === 9) && ("9" === 9));
+console.log((9 === 9) && ("9" === "9"));
+
+
