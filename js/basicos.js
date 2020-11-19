@@ -348,3 +348,45 @@ switch (dia) {
     console.log("Del 1 al 6");
     break;
 }
+
+console.log("##################  Ciclos (Loops)   ##################");
+
+let contador = 0;
+
+// WHILE
+while (contador <= 2) {
+  contador++;
+  console.log(`contador = ${contador}`);
+}
+
+// DO WHILE
+// se ejecuta al menos una vez
+do {
+  contador--;
+  console.log(`contador = ${contador}`);
+} while (contador > 1);
+
+// FOR
+// for (inicialización de variable; condición; decremento o incremento) {
+// sentencias que ejecuta el for}
+for (let i = 0; i <= 2; i++) {
+  console.log(`${i} lops con for`);
+}
+
+// FOR IN
+// para recorrer las propiedades de un objeto
+
+for (const propiedad in jr) {
+  console.log(`propiedad = ${propiedad}
+    valor = ${jr[propiedad]}`);
+  //cuando estamos en un for in y queremos conseguir el valor de una propiedad de un objeto
+  //debemos usar los [], ya que el "." no serviria
+}
+
+// FOR OF
+// para recorer los elementos de un objeto que sea iterable, como por ej un arreglo
+let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+for (const elemento of numeros) {
+  console.log(elemento);
+}
