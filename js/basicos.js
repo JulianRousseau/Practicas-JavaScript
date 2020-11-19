@@ -241,52 +241,110 @@ console.log("##################  Tipos de Operadores  ##################");
 // ARITMETICOS
 // +, -, *, /, %, ()
 
-let aritmeticos = 5 + (5-10) * -3
+let aritmeticos = 5 + (5 - 10) * -3;
 console.log(aritmeticos);
-let modulo = 1099 % 100 //el modulo nos da el residuo de una division 
+let modulo = 1099 % 100; //el modulo nos da el residuo de una division
 console.log(modulo);
 
 // RELACIONALES
 // >, <, <=, >=, ==, !=, ===, !==
 
-
 // = 1 igual es asignación  de variable
 // == 2 iguales es comparacion de valores
 // === 3 igulaes es comparación de tipo de dato y de valor
 
-console.log("7 == 7",        7 == 7);
-console.log('"7" == 7',    "7" == 7);
-console.log("7 === 7",       7 === 7);
-console.log('"7" === 7',   "7" === 7);
+console.log("7 == 7", 7 == 7);
+console.log('"7" == 7', "7" == 7);
+console.log("7 === 7", 7 === 7);
+console.log('"7" === 7', "7" === 7);
 
-console.log("7 != 7",        7 != 7);
-console.log('"7" != 7',    "7" != 7);
-console.log(" 7 !== 7",       7 !== 7);
-console.log('"7" !== 7',   "7" !== 7);
+console.log("7 != 7", 7 != 7);
+console.log('"7" != 7', "7" != 7);
+console.log(" 7 !== 7", 7 !== 7);
+console.log('"7" !== 7', "7" !== 7);
 
 // INCREMENTO - DECREMENTO
 // +=, -=, *=, /=
-let i =10
-i/=5
-console.log(i)
+let i = 10;
+i /= 5;
+console.log(i);
 
 // UNARIOS
 // ++, --
 
-i=10
-i++
-console.log(i)
-i--
-console.log(i)
+i = 10;
+i++;
+console.log(i);
+i--;
+console.log(i);
 
 // LOGICOS
-// !  Not 
-// || Or 
+// !  Not
+// || Or
 // && And
 
 console.log(!false);
-console.log((9 === 9) || ("9" === 9));
-console.log((9 === 9) && ("9" === 9));
-console.log((9 === 9) && ("9" === "9"));
+console.log(9 === 9 || "9" === 9);
+console.log(9 === 9 && "9" === 9);
+console.log(9 === 9 && "9" === "9");
 
+console.log("##################  Condicionales   ##################");
 
+//IF - ELSE
+let edad = 17;
+
+if (edad <= 18) {
+  console.log(`${edad} = Menor de edad`);
+} else {
+  console.log(`${edad} = Mayor de edad`);
+}
+
+//IF - ELSE IF - ELSE
+
+if (edad <= 5) {
+  console.log(`${edad} = primera infancia`);
+} else if (edad <= 11 && edad >= 6) {
+  console.log(`${edad} = infancia`);
+} else if (edad <= 18 && edad >= 12) {
+  console.log(`${edad} = adolescencia`);
+} else {
+  console.log(`${edad} = Mayor de edad`);
+}
+
+// OPERADOR TERNARIO
+// (condicion)? casoVerdadero : casoFalso
+console.log(2 === 2 ? "eso mismo" : "no che");
+console.log(2 === 3 ? "eso mismo" : "no che");
+
+let eresMayor = edad >= 18 ? "Eres mayor de Edad" : "Eres menor de Edad";
+console.log(eresMayor);
+
+// SWITCH - CASE
+let dia = 1;
+switch (dia) {
+  case 0:
+    console.log("Domingo");
+    break;
+  case 1:
+    console.log("Lunes");
+    break;
+  case 2:
+    console.log("Martes");
+    break;
+  case 3:
+    console.log("Miercoles");
+    break;
+  case 4:
+    console.log("Jueves");
+    break;
+  case 5:
+    console.log("Viernes");
+    break;
+  case 6:
+    console.log("Sabado");
+    break;
+
+  default:
+    console.log("Del 1 al 6");
+    break;
+}
