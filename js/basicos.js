@@ -419,3 +419,23 @@ try {
 } catch (error) {
   console.log(`Se produjo el siguiente ${error}`);
 }
+
+console.log("##################  break & continue   ##################");
+// estas palabras reservadas nos ayudan a controlar mejor el flujo de la app
+// estas sirven en las estructuras de control como for, while, do while, switch, etc
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+for (let i = 0; i < numeros.length; i++) {
+  if (i === 5) {
+    break; // al llegar al breack se sale del lop
+  }
+  console.log(numeros[i]);
+}
+
+for (let i = 0; i < numeros.length - 5; i++) {
+  if (i === 2) {
+    continue; // a diferencia de breck, se salta la iteracion actual y luego continua normalmente
+    //en este caso se salta el index 2 (que tiene el valor 3)
+  }
+  console.log(numeros[i]);
+}
