@@ -447,9 +447,9 @@ numeros = [1, 2, 3];
 
 // Sin Desestructuracion
 
-let uno = numeros[0];
-let dos = numeros[1];
-let tres = numeros[2];
+let uno = numeros[0],
+  dos = numeros[1],
+  tres = numeros[2];
 
 console.log(uno, dos, tres);
 
@@ -467,7 +467,38 @@ let persona = {
   apellidoo: "Rousseau",
   edadd: 35,
 };
-//no importa el orden en el que creamos las variables ya que buscaran a la propiedad que tenga su mismo nombre 
+//no importa el orden en el que creamos las variables ya que buscaran a la propiedad que tenga su mismo nombre
 let { edadd, apellidoo, nombree } = persona;
 
 console.log(nombree, apellidoo, edadd);
+
+console.log("##################  Objetos literales   ##################");
+// una forma simplificada de crear atributos y metodos e tambien de asignarlos
+
+let especie = "perro";
+let raza = "siberiano";
+
+const animal = {
+  especie: especie,
+  raza: raza,
+  ruido: function () {
+    console.log("Ladrar");
+  },
+};
+
+console.log(animal);
+animal.ruido();
+
+// Objetos literarios
+const animal2 = {
+  especie, //al designar la propiedad con el mismo nombre de la variable, se asigna su valor atomaticamente
+  raza,
+  color: "blanco", // si queremos agregar prop, lo hacemos normalmente
+  ruido() {
+    //y esta es la forma simplificada de crear metodos, sin " : function "
+    console.log("ruidazo");
+  },
+};
+
+console.log(animal2);
+animal2.ruido();
