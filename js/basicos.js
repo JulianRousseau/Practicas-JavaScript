@@ -439,3 +439,35 @@ for (let i = 0; i < numeros.length - 5; i++) {
   }
   console.log(numeros[i]);
 }
+
+console.log("##################  Destructuración   ##################");
+//Una forma de asignar lo que viene en un array o objeto a una nueva variable
+
+numeros = [1, 2, 3];
+
+// Sin Desestructuracion
+
+let uno = numeros[0];
+let dos = numeros[1];
+let tres = numeros[2];
+
+console.log(uno, dos, tres);
+
+// Con Destructuración
+// creo un arreglo sin nombre y dinamicamene se asignan los valores del arreglo en las nuevas variables
+
+const [one, two, three] = numeros;
+console.log(one, two, three);
+
+// para que la Destructuración funcione en los objetos debemos nombrar las variables igual que
+// la propiedad que pretendemos asignar
+
+let persona = {
+  nombree: "Julian",
+  apellidoo: "Rousseau",
+  edadd: 35,
+};
+//no importa el orden en el que creamos las variables ya que buscaran a la propiedad que tenga su mismo nombre 
+let { edadd, apellidoo, nombree } = persona;
+
+console.log(nombree, apellidoo, edadd);
