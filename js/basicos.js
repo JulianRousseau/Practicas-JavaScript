@@ -390,3 +390,32 @@ let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 for (const elemento of numeros) {
   console.log(elemento);
 }
+
+console.log("##################  Manejo de Errores   ##################");
+// try catch finally
+
+try {
+  //en el try se ejecuta el codigo a evaluar
+  console.log(`try`);
+  error_a_proposito; //cuando se encuentra un error, salta directo al catch
+  console.log("esto no se ejecuta si se encuentra un error");
+} catch (error) {
+  //catch captura los errores
+  console.log(`El error que tenemos es: ${error}`);
+} finally {
+  //finally es opcional, se ejecutara siempre al final, tengamos un error o no
+  console.log(`finally`);
+}
+
+//crear nuestros propios mensajes de error
+try {
+  let numero = "palabra";
+  //isNaN es una funcion que regresa true si no es un numero, si es un numero regresa true
+  if (isNaN(numero)) {
+    // Para crear nuestros propios errores
+    throw new Error("No es un numero");
+  }
+  console.log("Sin errores");
+} catch (error) {
+  console.log(`Se produjo el siguiente ${error}`);
+}
