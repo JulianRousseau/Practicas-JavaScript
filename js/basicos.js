@@ -502,3 +502,31 @@ const animal2 = {
 
 console.log(animal2);
 animal2.ruido();
+
+console.log(
+  "##################  Parámetros REST & Operador Spread   ##################"
+);
+// REST
+// rest es una forma de agregar parametros "infinitos"
+
+function sumar (a, b, ...c) { // se deben poner "..." antes de nombre donde estan guardados 
+  let resultado = a + b 
+  //todo lo que llegue despues de c se va a tratar como un arreglo
+  c.forEach(function (n){
+    // para cada elemento que llege a c, lo vamos a sumar a resultado
+    resultado += n
+  })
+  return resultado
+}
+
+console.log(sumar(2,2))//solo usando a + b
+console.log(sumar(2,2,20,55,73)) //a partir del tercer valor se usa el parametro rest, sin limites
+
+// SPREAD (operador de propagacion)
+let aa = [0,1,2,3,4],
+bb = [5,6,7,8,9]
+
+console.log(aa, bb)
+
+let cc=[...aa, ...bb] // con spread podemos unir dos arreglos 
+console.log(cc)
