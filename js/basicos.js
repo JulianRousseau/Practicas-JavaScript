@@ -96,8 +96,8 @@ console.log(parseInt(numero3)); // = nos entrega un entero
 let cadenaTexto = "15";
 let vuelvoNumero = parseInt(cadenaTexto);
 //typeof nos dice de que tipo es
-console.log(typeof cadenaTexto + cadenaTexto);
-console.log(typeof vuelvoNumero + vuelvoNumero);
+console.log(typeof cadenaTexto + " " + cadenaTexto);
+console.log(typeof vuelvoNumero + " " + vuelvoNumero);
 
 console.log("##################  Booleans  ##################");
 let veradero = true;
@@ -182,7 +182,7 @@ console.log(`index numero 4 y subindex 2 = ${b[4][2]}`); //y asi sucesivamente d
 
 //otra forma de crear arrys (con el metodo of)
 const c = Array.of("a", "b", "c", 1, 2, 3);
-
+console.log(c)
 const colores = ["Rojo", "Verde", "Azul"];
 console.log(colores);
 //Agregar elemento en la ultima posición
@@ -249,9 +249,9 @@ console.log(modulo);
 // RELACIONALES
 // >, <, <=, >=, ==, !=, ===, !==
 
-// = 1 igual es asignación  de variable
-// == 2 iguales es comparacion de valores
-// === 3 igulaes es comparación de tipo de dato y de valor
+// =  asignación  de variable
+// ==  comparacion de valores
+// ===  comparación de tipo de dato y de valor
 
 console.log("7 == 7", 7 == 7);
 console.log('"7" == 7', "7" == 7);
@@ -312,7 +312,7 @@ if (edad <= 5) {
 }
 
 // OPERADOR TERNARIO
-// (condicion)? casoVerdadero : casoFalso
+// condicion ? casoVerdadero : casoFalso
 console.log(2 === 2 ? "eso mismo" : "no che");
 console.log(2 === 3 ? "eso mismo" : "no che");
 
@@ -410,7 +410,7 @@ try {
 //crear nuestros propios mensajes de error
 try {
   let numero = "palabra";
-  //isNaN es una funcion que regresa true si no es un numero, si es un numero regresa true
+  //isNaN es una funcion que regresa true si no es un numero, si es un numero regresa false
   if (isNaN(numero)) {
     // Para crear nuestros propios errores
     throw new Error("No es un numero");
